@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+      <meta charset="utf-8"/>
+      <title> "Yuan Yang"'s Assignment 3 </title>
+      <!-- Include external libraries -->
+      <script src = "lib/webgl-utils.js"></script>
+      <script src = "lib/webgl-debug.js"></script>
+      <script src = "lib/cuon-utils.js"></script>
+      <script src = "lib/load-file.js"></script>
+
+      <!-- Include main program -->
+      <script src = "prog/main.js"></script>
+      <!-- Include scene objects -->
+      <script src = "prog/scene/scene.js"></script>
+      <script src = "prog/scene/vertex.js"></script>
+      <script src = "prog/scene/geometry.js"></script>
+      <!-- Include internal functions -->
+      <script src = "prog/eventFunctions.js"></script>
+      <script src = "prog/glslFunctions.js"></script>
+      <script src = "prog/htmlFunctions.js"></script>
+
+      <!-- Include geometric objects -->
+      <script src = "prog/geometries/circle.js"></script>
+      <script src = "prog/geometries/square.js"></script>
+      <script src = "prog/geometries/triangle.js"></script>
+
+      <!-- Include shaders -->
+      <script src = "prog/shaders.js"></script>
+  </head>
+
+
+    <body onload = "main()">
+      <p> Assignment 2 </p>
+      <canvas id = "webgl" width = "500" height = "500">
+      </canvas>
+      <div>
+        <p id="time"> Shapes drawn in 000 milliseconds</p>
+      </div>
+      <div>
+              <p id="xy">x:0, y:0</p>
+      </div>
+      <div>
+              <button type="button" id="btn">Clear Canvas</button>
+      </div>
+      <div>
+            Drawing mode:
+            <button type="button" id="squares">Squares</button>
+            <button type="button" id="triangles">Triangles</button>
+            <button type="button" id="circles">Circles</button>
+      </div>
+      <div class="slidecontainer">
+              Shape Color :
+              <label for="red">Red</label>
+              <input type="range" min="0.0" max="1.0" step="0.001" value="0.5" class="slider" id="red" name="red">
+              <label for="green">Green</label>
+              <input type="range" min="0.0" max="1.0" step="0.001" value="0.5" class="slider" id="green" name="green">
+              <label for="blue">Blue</label>
+              <input type="range" min="0.0" max="1.0" step="0.001" value="0.5" class="slider" id="blue" name="blue">
+      </div>
+      <div>
+            <label for="size">Shape Size :</label>
+            <input type="range" min="0" max="1.0" step="0.001" value="0.5" class="slider" id="size" name="size">
+            <label for="segment">(Circles) Segment Count:</label>
+            <input type="range" min="10.0" max="20.0" step="1.0" value="15.0" class="slider" id="segment" name="segment">
+      </div>
+
+    </body>
+</html>
